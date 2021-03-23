@@ -143,3 +143,6 @@ html *, html *:before, html *:after {
     padding-top: 30px;
     margin: 0 auto;
 }
+.exchange-logo img {
+    width: 100%;
+}
