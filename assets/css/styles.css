@@ -54,7 +54,7 @@ html {
     color: #fff;
     font-family: Helvetica, sans-serif;
     width: 100%;
-    letter-spacing: 2px;
+    letter-spacing: 1px;
 }
 html *, html *:before, html *:after {
     box-sizing: inherit;
@@ -94,6 +94,7 @@ html *, html *:before, html *:after {
     font-size: 150%;
     width: 33%;
     text-align: right;
+    letter-spacing: 2px;
 }
 .xrp-data {    
     font-weight: 700;
