@@ -54,6 +54,7 @@ html {
     color: #fff;
     font-family: Helvetica, sans-serif;
     width: 100%;
+    letter-spacing: 2px;
 }
 html *, html *:before, html *:after {
     box-sizing: inherit;
@@ -90,7 +91,6 @@ html *, html *:before, html *:after {
 }
 .header-hashtag {
     font-weight: 900;
-    font-style: italic;
     font-size: 150%;
     width: 33%;
     text-align: right;
@@ -117,4 +117,21 @@ html *, html *:before, html *:after {
 .xrp-percent svg {
     margin-bottom: 3px;
     margin-left: 5px;
+    flex-wrap: wrap;
+}
+.card-container {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 30px;
+    flex-wrap: wrap;
+    margin-top: 50px;
+}
+.card {
+    height: 400px;
+    width: 32%;
+    border-radius: 8px;
+    background: linear-gradient(to bottom, #141414 0%, #0a0a0a 100%);
+}
+.card:nth-child(4), .card:nth-child(5), .card:nth-child(6) {
+    margin-top: 2%
 }
