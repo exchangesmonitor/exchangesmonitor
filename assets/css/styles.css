@@ -126,6 +126,7 @@ html *, html *:before, html *:after {
     padding: 0 30px;
     flex-wrap: wrap;
     margin-top: 50px;
+    padding-bottom: 100px;
 }
 .card {
     height: 400px;
