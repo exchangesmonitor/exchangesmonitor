@@ -129,16 +129,16 @@ html *, html *:before, html *:after {
     padding-bottom: 100px;
 }
 .card {
-    height: 250px;
     width: 32%;
     border-radius: 8px;
     background: linear-gradient(to bottom, #141414 0%, #0a0a0a 100%);
+    padding-bottom: 30px;
 }
 .card:nth-child(4), .card:nth-child(5), .card:nth-child(6) {
     margin-top: 2%
 }
 .exchange-logo {
-    width: 40%;
+    width: 30%;
     max-width: 300px;
     padding-top: 30px;
     margin: 0 auto;
@@ -153,4 +153,24 @@ html *, html *:before, html *:after {
     color: #fff;
     font-weight: 700;
     text-align: center;    
+}
+.status-wrapper {
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-align: center;
+    padding: 30px;
+}
+.status-button {
+    border-radius: 8px;
+    padding: 8px;
+    width: 80px;
+    margin: 0 auto;
+    margin-top: 20px;
+}
+.status-no {
+    background-color: red;
+}
+.status-yes {
+    background-color: #49c15d;
 }
