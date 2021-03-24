@@ -72,7 +72,7 @@ html *, html *:before, html *:after {
     width: 125px;
 }
 .xrp-coin {
-    padding-top: 20px;
+    /* padding-top: 20px; */
     width: 200px;
 }
 .xrp-coin img {
