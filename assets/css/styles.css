@@ -79,15 +79,7 @@ html *, html *:before, html *:after {
     width: 100%;
     position: relative;
     padding: 45px;
-    background-image: radial-gradient(white 0%, rgb(255 255 255 / 34%) 40%, black 60%);
-}
-.xrp-coin img::after {
-    display: block;
-    position: absolute;
-    background-image: radial-gradient(circle, red, yellow, green);
-    content: '';
-    width: 100%;
-    height: 100%;
+    /* background-image: radial-gradient(white 0%, rgb(255 255 255 / 34%) 40%, black 60%); */
 }
 .header-hashtag {
     font-weight: 900;
@@ -99,16 +91,21 @@ html *, html *:before, html *:after {
 .xrp-data {    
     font-weight: 700;
     text-align: center;
-    width: 100%;
     display: flex;
     justify-content: center;
+    font-size: 60%;
+    align-items: center;
+    letter-spacing: 1.5;
+}
+.gray-text {
+    color: #737373;
 }
 .xrp-price {
     color: #fff;
 }
 .xrp-percent {
     color: #2E9D76;
-    padding-left: 6px;
+    padding-left: 4px;
     display: flex;
     align-items: center;
 }
@@ -117,8 +114,22 @@ html *, html *:before, html *:after {
 }
 .xrp-percent svg {
     margin-bottom: 3px;
-    margin-left: 5px;
+    margin-left: 3px;
     flex-wrap: wrap;
+}
+.notifier-message {
+    padding: 0 30px;
+    font-weight: 900;
+    line-height: 1.5;
+    letter-spacing: 2px;
+}
+.notifier-title {
+    font-size: 140%;
+    display: flex;
+    justify-content: space-between;
+}
+.notifier-subtitle {
+    color: #737373;
 }
 .card-container {
     display: flex;
@@ -149,21 +160,23 @@ html *, html *:before, html *:after {
     /* top */
     width: 100%;
     /* max-width: 300px; */
-    padding-top: 30px;
+    padding-top: 15px;
     /* margin: 0 auto; */
     display: flex;
     justify-content: space-between;
     align-items: center;
     max-width: unset;
+    height: 37px
 }
 .exchange-logo img {
     width: 100%;
 
     /* top */
-    width: 30%;
+    width: auto;
+    height: 20px;
 }
 .last-update {
-    font-size: 80%;
+    font-size: 70%;
     width: 100%;
     letter-spacing: 1px;
     color: #fff;
@@ -178,7 +191,7 @@ html *, html *:before, html *:after {
     text-transform: uppercase;
     letter-spacing: 2px;
     text-align: center;
-    padding: 30px;
+    padding: 30px 30px 23px 30px;
 }
 .status-button {
     font-size: 120%;
