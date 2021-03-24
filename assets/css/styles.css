@@ -163,7 +163,7 @@ html *, html *:before, html *:after {
     width: 30%;
 }
 .last-update {
-    font-size: 60%;
+    font-size: 80%;
     width: 100%;
     letter-spacing: 1px;
     color: #fff;
@@ -181,6 +181,7 @@ html *, html *:before, html *:after {
     padding: 30px;
 }
 .status-button {
+    font-size: 110%;
     border-radius: 8px;
     padding: 8px;
     width: 80px;
