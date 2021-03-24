@@ -74,12 +74,15 @@ html *, html *:before, html *:after {
 }
 .xrp-coin {
     /* padding-top: 20px; */
-    width: 200px;
+    width: 100%;
+    text-align: center;
+    padding-top: 30px;
 }
 .xrp-coin img {
     width: 100%;
+    max-width: 80px;
     position: relative;
-    padding: 45px;
+    margin-bottom: 20px;
 }
 .header-hashtag {
     font-weight: 900;
@@ -93,9 +96,10 @@ html *, html *:before, html *:after {
     text-align: center;
     display: flex;
     justify-content: center;
-    font-size: 60%;
     align-items: center;
     letter-spacing: 1.5;
+    font-size: 85%;
+    margin-bottom: 50px;
 }
 .gray-text {
     color: #737373;
@@ -113,7 +117,7 @@ html *, html *:before, html *:after {
     line-height: 0;
 }
 .xrp-percent svg {
-    margin-bottom: 3px;
+    margin-bottom: 2px;
     margin-left: 3px;
     flex-wrap: wrap;
 }
