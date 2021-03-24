@@ -138,10 +138,9 @@ html *, html *:before, html *:after {
 .card-container {
     display: flex;
     justify-content: space-between;
-    padding: 0 30px;
+    padding: 0 30px 2% 30px;
     flex-wrap: wrap;
     margin-top: 50px;
-    padding-bottom: 100px;
 }
 .card {
     width: 32%;
