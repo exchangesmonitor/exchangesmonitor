@@ -495,15 +495,44 @@ button.is-done {
     }
     .xrp-header {
         flex-wrap: wrap;
-        padding: 30px 20px;
+        padding: 30px 20px 0 20px;
     }
     .card {
-        width: 49%;
+        padding: 0 5px;
+        width: calc(50% - 5px);
+        margin-top: 0;
     }
     .cryptowzrd-logo {
         width: fit-content;
     }
     .header-hashtag {
         width: fit-content;
+    }
+    .cryptowzrd-logo img {
+        width: 100px;
+    }
+    .header-hashtag {
+        font-size: 125%;
+    }
+    .exchange-logo {
+        flex-direction: column;
+    }
+    .last-update {
+        margin-top: 7px;
+    }
+    .status-wrapper {
+        padding: 30px 5px 23px 5px;
+    }
+    .card:nth-child(3), .card:nth-child(4), .card:nth-child(5), .card:nth-child(6) {
+        margin-top: 10px;
+    }
+    .technical-card {
+        width: 100%;
+    }
+    .newsletter-row {
+        width: 100%;
+    }
+    .row-technical-newsletter {
+        flex-wrap: wrap;
     }
 }
