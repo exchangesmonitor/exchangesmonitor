@@ -79,7 +79,6 @@ html *, html *:before, html *:after {
     width: 100%;
     position: relative;
     padding: 45px;
-    /* background-image: radial-gradient(white 0%, rgb(255 255 255 / 34%) 40%, black 60%); */
 }
 .header-hashtag {
     font-weight: 900;
@@ -159,9 +158,7 @@ html *, html *:before, html *:after {
 
     /* top */
     width: 100%;
-    /* max-width: 300px; */
     padding-top: 15px;
-    /* margin: 0 auto; */
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -206,4 +203,134 @@ html *, html *:before, html *:after {
 }
 .status-yes {
     background-color: #49c15d;
+}
+.socials-row {
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: 900;
+}
+.social-row-title {
+    margin-bottom: 20px;
+    font-size: 130%;
+}
+.socials-row svg {
+    height: 35px;
+    width: 32px;
+    fill: #fff;
+    margin: 0 20px;
+}
+.social-row-logos {
+    margin-bottom: 20px;
+}
+.technicals-title {
+    margin-bottom: 20px;
+    margin-top: 30px;
+    font-size: 130%;
+}
+@-webkit-keyframes fadeInFromNone {
+    0% {
+        display: none;
+        opacity: 0;
+    }
+
+    1% {
+        display: block;
+        opacity: 0;
+    }
+
+    90% {
+        opacity: 0;
+    }
+
+    100% {
+        display: block;
+        opacity: 1;
+    }
+}
+
+@-moz-keyframes fadeInFromNone {
+    0% {
+        display: none;
+        opacity: 0;
+    }
+
+    1% {
+        display: block;
+        opacity: 0;
+    }
+
+    90% {
+        opacity: 0;
+    }
+
+    100% {
+        display: block;
+        opacity: 1;
+    }
+}
+
+@-o-keyframes fadeInFromNone {
+    0% {
+        display: none;
+        opacity: 0;
+    }
+
+    1% {
+        display: block;
+        opacity: 0;
+    }
+
+    90% {
+        opacity: 0;
+    }
+
+    100% {
+        display: block;
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInFromNone {
+    0% {
+        display: none;
+        opacity: 0;
+    }
+
+    1% {
+        display: block;
+        opacity: 0;
+    }
+
+    90% {
+        opacity: 0;
+    }
+
+    100% {
+        display: block;
+        opacity: 1;
+    }
+}
+.latest-technical {
+    font-weight: 900;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-transform: uppercase;    
+}
+.twitter-tweet {
+    -webkit-animation: fadeInFromNone 2s ease-out;
+    -moz-animation: fadeInFromNone 2s ease-out;
+    -o-animation: fadeInFromNone 2s ease-out;
+    animation: fadeInFromNone 2s ease-out;
+    min-height: 400px;
+}
+.newsletter-row {
+    font-size: 130%;
+    font-weight: 900;
+    text-transform: uppercase;
+    text-align: center;
+    margin-top: 50px;
+    padding-bottom: 50px;
 }
