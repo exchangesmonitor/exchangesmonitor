@@ -556,4 +556,7 @@ button.is-done {
     input {
         padding-right: 110px;
     }
+    iframe {
+        width: 100% !important;
+    }
 }
