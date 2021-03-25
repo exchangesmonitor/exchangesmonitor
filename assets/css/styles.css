@@ -335,9 +335,6 @@ html *, html *:before, html *:after {
     height: 48%;
 }
 
-.newsletter-title {
-    margin-bottom: 30px;
-}
 .newsletter-card {
     width: 100%;
     border-radius: 8px;
