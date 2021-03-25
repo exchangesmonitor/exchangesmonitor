@@ -558,6 +558,7 @@ button.is-done {
     }
     form {
         height: 50px;
+        margin-top: 20px;
     }
     button {
         width: 100px;
@@ -567,5 +568,11 @@ button.is-done {
     }
     iframe {
         width: 100% !important;
+    }
+    .side-section-full {
+        width: 100%;
+    }
+    .socials-row {
+        margin-top: 16px;
     }
 }
