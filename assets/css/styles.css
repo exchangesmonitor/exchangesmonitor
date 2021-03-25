@@ -460,6 +460,9 @@ button.is-done {
 .xrp-coin-m {
     display: none;
 }
+.last-update-m {
+    display: none;
+}
 @media only screen and (max-width: 767px) {
     body {
         font-size: 75%;
