@@ -22,3 +22,7 @@ button.addEventListener('click', function(e){
     button.innerHTML = "Thanks! Check Your Email."
   }, 500);
 });
+
+$( ".toggle-color" ).click(function() {
+  $(body).toggleClass("darkmode");
+});
