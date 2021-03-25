@@ -509,6 +509,9 @@ button.is-done {
         width: calc(50% - 8px);
         margin-top: 0;
     }
+    .last-update-m {
+        display: block;
+    }
     .cryptowzrd-logo {
         width: fit-content;
     }
