@@ -819,4 +819,7 @@ footer {
     .technical-card-d {
         display: none;
     }
+    .cryptowzrd-row {
+        margin-top: 16px;
+    }    
 }
