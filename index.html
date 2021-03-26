@@ -17,6 +17,62 @@
 
 <body>
     <header class="xrp-header">
+      <div class="toggle-color">
+        <svg class="sun" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+           viewBox="0 0 302.4 302.4" style="enable-background:new 0 0 302.4 302.4;" xml:space="preserve">
+        <g>
+          <g>
+            <g>
+              <path d="M204.8,97.6C191.2,84,172,75.2,151.2,75.2s-40,8.4-53.6,22.4c-13.6,13.6-22.4,32.8-22.4,53.6s8.8,40,22.4,53.6
+                c13.6,13.6,32.8,22.4,53.6,22.4s40-8.4,53.6-22.4c13.6-13.6,22.4-32.8,22.4-53.6S218.8,111.2,204.8,97.6z"/>
+              <path d="M151.2,51.6c5.6,0,10.4-4.8,10.4-10.4V10.4c0-5.6-4.8-10.4-10.4-10.4c-5.6,0-10.4,4.8-10.4,10.4v30.8
+                C140.8,46.8,145.6,51.6,151.2,51.6z"/>
+              <path d="M236.4,80.8l22-22c4-4,4-10.4,0-14.4s-10.4-4-14.4,0l-22,22c-4,4-4,10.4,0,14.4C225.6,84.8,232,84.8,236.4,80.8z"/>
+              <path d="M292,140.8h-30.8c-5.6,0-10.4,4.8-10.4,10.4c0,5.6,4.8,10.4,10.4,10.4H292c5.6,0,10.4-4.8,10.4-10.4
+                C302.4,145.6,297.6,140.8,292,140.8z"/>
+              <path d="M236,221.6c-4-4-10.4-4-14.4,0s-4,10.4,0,14.4l22,22c4,4,10.4,4,14.4,0s4-10.4,0-14.4L236,221.6z"/>
+              <path d="M151.2,250.8c-5.6,0-10.4,4.8-10.4,10.4V292c0,5.6,4.8,10.4,10.4,10.4c5.6,0,10.4-4.8,10.4-10.4v-30.8
+                C161.6,255.6,156.8,250.8,151.2,250.8z"/>
+              <path d="M66,221.6l-22,22c-4,4-4,10.4,0,14.4s10.4,4,14.4,0l22-22c4-4,4-10.4,0-14.4C76.8,217.6,70.4,217.6,66,221.6z"/>
+              <path d="M51.6,151.2c0-5.6-4.8-10.4-10.4-10.4H10.4c-5.6,0-10.4,4.8-10.4,10.4s4.8,10.4,10.4,10.4h30.8
+                C46.8,161.6,51.6,156.8,51.6,151.2z"/>
+              <path d="M66,80.8c4,4,10.4,4,14.4,0s4-10.4,0-14.4l-22-22c-4-4-10.4-4-14.4,0s-4,10.4,0,14.4L66,80.8z"/>
+            </g>
+          </g>
+        </g>
+        <g>
+        </g>
+        <g>
+        </g>
+        <g>
+        </g>
+        <g>
+        </g>
+        <g>
+        </g>
+        <g>
+        </g>
+        <g>
+        </g>
+        <g>
+        </g>
+        <g>
+        </g>
+        <g>
+        </g>
+        <g>
+        </g>
+        <g>
+        </g>
+        <g>
+        </g>
+        <g>
+        </g>
+        <g>
+        </g>
+        </svg>
+        <svg class="moon" height="448pt" viewBox="-12 0 448 448.04455" width="448pt" xmlns="http://www.w3.org/2000/svg"><path d="m224.023438 448.03125c85.714843.902344 164.011718-48.488281 200.117187-126.230469-22.722656 9.914063-47.332031 14.769531-72.117187 14.230469-97.15625-.109375-175.890626-78.84375-176-176 .972656-65.71875 37.234374-125.832031 94.910156-157.351562-15.554688-1.980469-31.230469-2.867188-46.910156-2.648438-123.714844 0-224.0000005 100.289062-224.0000005 224 0 123.714844 100.2851565 224 224.0000005 224zm0 0"/></svg>
+        </div>
       <div class="cryptowzrd-logo" data-aos="fade-right">
         <img src="./assets/images/CryptoWzrd_Logo_White_Cropped.svg">
       </div>      
@@ -27,7 +83,7 @@
             CURRENT PRICE: $<crypto-widget type="inline" template="generic" color="default" assets="XRP~USD" markup="{price}" api="cryptocompare.com" realtime="true" animation="flash"></crypto-widget>
           </div>
           <div class="xrp-percent">
-            <span><crypto-widget type="inline" template="generic" color="default" assets="XRP~USD" markup="{change_pct_24h}" api="cryptocompare.com" realtime="true" animation="flash"></crypto-widget></span>
+            <span><crypto-widget type="inline" template="generic" color="default" assets="XRP~USD" markup="{change_pct}" api="cryptocompare.com" realtime="true" animation="flash"></crypto-widget></span>
             <svg width="12" height="7" viewBox="0 0 12 7" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path d="M11.2958 5.42288L6.48338 0.610448C6.34745 0.47436 6.18634 0.406372 6.00002 0.406372C5.8137 0.406372 5.65263 0.47436 5.51654 0.610448L0.704076 5.42288C0.567988 5.55896 0.5 5.72007 0.5 5.90624C0.5 6.09241 0.567988 6.25363 0.704076 6.38961C0.840316 6.52569 1.00139 6.59372 1.18755 6.59372H10.8124C10.9987 6.59372 11.1598 6.52569 11.2958 6.38961C11.4318 6.25367 11.5 6.09244 11.5 5.90624C11.5 5.72004 11.4318 5.55896 11.2958 5.42288Z"/>
             </svg>            
@@ -35,72 +91,16 @@
         </div>
       </div>
       <div class="header-hashtag" data-aos="fade-left">        
-        #RELISTXRP
-        <div class="toggle-color">
-          <svg class="sun" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-             viewBox="0 0 302.4 302.4" style="enable-background:new 0 0 302.4 302.4;" xml:space="preserve">
-          <g>
-            <g>
-              <g>
-                <path d="M204.8,97.6C191.2,84,172,75.2,151.2,75.2s-40,8.4-53.6,22.4c-13.6,13.6-22.4,32.8-22.4,53.6s8.8,40,22.4,53.6
-                  c13.6,13.6,32.8,22.4,53.6,22.4s40-8.4,53.6-22.4c13.6-13.6,22.4-32.8,22.4-53.6S218.8,111.2,204.8,97.6z"/>
-                <path d="M151.2,51.6c5.6,0,10.4-4.8,10.4-10.4V10.4c0-5.6-4.8-10.4-10.4-10.4c-5.6,0-10.4,4.8-10.4,10.4v30.8
-                  C140.8,46.8,145.6,51.6,151.2,51.6z"/>
-                <path d="M236.4,80.8l22-22c4-4,4-10.4,0-14.4s-10.4-4-14.4,0l-22,22c-4,4-4,10.4,0,14.4C225.6,84.8,232,84.8,236.4,80.8z"/>
-                <path d="M292,140.8h-30.8c-5.6,0-10.4,4.8-10.4,10.4c0,5.6,4.8,10.4,10.4,10.4H292c5.6,0,10.4-4.8,10.4-10.4
-                  C302.4,145.6,297.6,140.8,292,140.8z"/>
-                <path d="M236,221.6c-4-4-10.4-4-14.4,0s-4,10.4,0,14.4l22,22c4,4,10.4,4,14.4,0s4-10.4,0-14.4L236,221.6z"/>
-                <path d="M151.2,250.8c-5.6,0-10.4,4.8-10.4,10.4V292c0,5.6,4.8,10.4,10.4,10.4c5.6,0,10.4-4.8,10.4-10.4v-30.8
-                  C161.6,255.6,156.8,250.8,151.2,250.8z"/>
-                <path d="M66,221.6l-22,22c-4,4-4,10.4,0,14.4s10.4,4,14.4,0l22-22c4-4,4-10.4,0-14.4C76.8,217.6,70.4,217.6,66,221.6z"/>
-                <path d="M51.6,151.2c0-5.6-4.8-10.4-10.4-10.4H10.4c-5.6,0-10.4,4.8-10.4,10.4s4.8,10.4,10.4,10.4h30.8
-                  C46.8,161.6,51.6,156.8,51.6,151.2z"/>
-                <path d="M66,80.8c4,4,10.4,4,14.4,0s4-10.4,0-14.4l-22-22c-4-4-10.4-4-14.4,0s-4,10.4,0,14.4L66,80.8z"/>
-              </g>
-            </g>
-          </g>
-          <g>
-          </g>
-          <g>
-          </g>
-          <g>
-          </g>
-          <g>
-          </g>
-          <g>
-          </g>
-          <g>
-          </g>
-          <g>
-          </g>
-          <g>
-          </g>
-          <g>
-          </g>
-          <g>
-          </g>
-          <g>
-          </g>
-          <g>
-          </g>
-          <g>
-          </g>
-          <g>
-          </g>
-          <g>
-          </g>
-          </svg>
-          <svg class="moon" height="448pt" viewBox="-12 0 448 448.04455" width="448pt" xmlns="http://www.w3.org/2000/svg"><path d="m224.023438 448.03125c85.714843.902344 164.011718-48.488281 200.117187-126.230469-22.722656 9.914063-47.332031 14.769531-72.117187 14.230469-97.15625-.109375-175.890626-78.84375-176-176 .972656-65.71875 37.234374-125.832031 94.910156-157.351562-15.554688-1.980469-31.230469-2.867188-46.910156-2.648438-123.714844 0-224.0000005 100.289062-224.0000005 224 0 123.714844 100.2851565 224 224.0000005 224zm0 0"/></svg>
-                  </div>
+        #RELISTXRP        
       </div>
       <div class="xrp-coin xrp-coin-m" data-aos="fade-down">
         <img src="assets/images/xrp-logo.svg">
         <div class="xrp-data">
           <div class="xrp-price">
-            CURRENT PRICE: $0.5088
+            CURRENT PRICE: $<crypto-widget type="inline" template="generic" color="default" assets="XRP~USD" markup="{price}" api="cryptocompare.com" realtime="true" animation="flash"></crypto-widget>
           </div>
           <div class="xrp-percent">
-            <span>6.17%</span>
+            <span><crypto-widget type="inline" template="generic" color="default" assets="XRP~USD" markup="{change_pct}" api="cryptocompare.com" realtime="true" animation="flash"></crypto-widget></span>
             <svg width="12" height="7" viewBox="0 0 12 7" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path d="M11.2958 5.42288L6.48338 0.610448C6.34745 0.47436 6.18634 0.406372 6.00002 0.406372C5.8137 0.406372 5.65263 0.47436 5.51654 0.610448L0.704076 5.42288C0.567988 5.55896 0.5 5.72007 0.5 5.90624C0.5 6.09241 0.567988 6.25363 0.704076 6.38961C0.840316 6.52569 1.00139 6.59372 1.18755 6.59372H10.8124C10.9987 6.59372 11.1598 6.52569 11.2958 6.38961C11.4318 6.25367 11.5 6.09244 11.5 5.90624C11.5 5.72004 11.4318 5.55896 11.2958 5.42288Z"/>
             </svg>            
@@ -275,8 +275,8 @@
           </div> -->
         </div>
       </div>      
-      <div class="row-technical-newsletter">      
-        <div class="technical-card" data-aos="fade-up">
+      <div class="row-technical-newsletter">
+        <div class="technical-card technical-card-d" data-aos="fade-up">
           <div class="latest-technical">
             <div class="technicals-title">Our latest Daily XRP Technical Analysis</div>
             <blockquote class="twitter-tweet" data-theme="dark"><p lang="en" dir="ltr">XRP Daily Technical Outlook:<a href="https://twitter.com/search?q=%24XRP&amp;src=ctag&amp;ref_src=twsrc%5Etfw">$XRP</a> and XRPBTC both closed bullish as I mentioned yesterday. 0.0000091 BTC will be the support target here and we&#39;ll see a great bullish move in XRP as soon as Bitcoin finds a support. I&#39;ll be looking for a scalp on the intraday chart tomorrow 🧙‍♂️ <a href="https://t.co/zbfRvBD08M">pic.twitter.com/zbfRvBD08M</a></p>&mdash; CRYPTOWZRD (@cryptoWZRD_) <a href="https://twitter.com/cryptoWZRD_/status/1375278910900895749?ref_src=twsrc%5Etfw">March 26, 2021</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>            
@@ -294,6 +294,12 @@
               <label for="email">email address</label>
               <button name="submit" value="Subscribe" type="submit" id="button">Notify Me</button>
             </form>
+          </div>
+        </div>
+        <div class="technical-card technical-card-m" data-aos="fade-up">
+          <div class="latest-technical">
+            <div class="technicals-title">Our latest Daily XRP Technical Analysis</div>
+            <blockquote class="twitter-tweet" data-theme="dark"><p lang="en" dir="ltr">XRP Daily Technical Outlook:<a href="https://twitter.com/search?q=%24XRP&amp;src=ctag&amp;ref_src=twsrc%5Etfw">$XRP</a> and XRPBTC both closed bullish as I mentioned yesterday. 0.0000091 BTC will be the support target here and we&#39;ll see a great bullish move in XRP as soon as Bitcoin finds a support. I&#39;ll be looking for a scalp on the intraday chart tomorrow 🧙‍♂️ <a href="https://t.co/zbfRvBD08M">pic.twitter.com/zbfRvBD08M</a></p>&mdash; CRYPTOWZRD (@cryptoWZRD_) <a href="https://twitter.com/cryptoWZRD_/status/1375278910900895749?ref_src=twsrc%5Etfw">March 26, 2021</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>            
           </div>
         </div>
         <div class="cryptowzrd-row third-height">
