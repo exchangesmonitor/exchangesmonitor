@@ -650,7 +650,12 @@ form {
   button.is-active {
     background: #6f6f6f;
     color: #fff;
-  }
+}
+.inner-card-text a, .inner-card-text a:focus, .inner-card-text a:active, .inner-card-text a:visited {
+    color: #fff;
+    text-decoration: none;
+    cursor: pointer;
+}
   
 button.is-done {
     width: 100%;
