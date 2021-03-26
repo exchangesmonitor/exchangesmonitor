@@ -125,18 +125,7 @@
         </div>
       </div>
     </header>    
-    <main>        
-      <!-- <div class="xrp-data" data-aos="fade-up">
-        <div class="xrp-price">
-          $0.5231
-        </div>
-        <div class="xrp-percent">
-          <span>1.24%</span>
-          <svg width="12" height="7" viewBox="0 0 12 7" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M11.2958 5.42288L6.48338 0.610448C6.34745 0.47436 6.18634 0.406372 6.00002 0.406372C5.8137 0.406372 5.65263 0.47436 5.51654 0.610448L0.704076 5.42288C0.567988 5.55896 0.5 5.72007 0.5 5.90624C0.5 6.09241 0.567988 6.25363 0.704076 6.38961C0.840316 6.52569 1.00139 6.59372 1.18755 6.59372H10.8124C10.9987 6.59372 11.1598 6.52569 11.2958 6.38961C11.4318 6.25367 11.5 6.09244 11.5 5.90624C11.5 5.72004 11.4318 5.55896 11.2958 5.42288Z" fill="#16C084"/>
-          </svg>            
-        </div>
-      </div> -->
+    <main>              
       <div class="notifier-message" data-aos="fade-up">
         <div class="notifier-title">
           <div class="left-title">XRP RELIST NOTIFIER&trade;</div>          
@@ -151,47 +140,77 @@
             var socket = io("http://ec2-18-218-86-16.us-east-2.compute.amazonaws.com:3000/xrpNews");
             
             socket.emit("data");
-            socket.on('data', function (msg) {
-              console.log(msg)
+            socket.on('data', function (data) {
+              console.log(data)
               let Binance = data.filter(x=>x.name==='Binance')[0].isLIVE;
               document.getElementById("binance").innerText=Binance;
+              if (Binance === 'Yes') {
+                document.getElementById("binance").classList.add("status-yes");
+              } else {
+                document.getElementById("binance").classList.add("status-no");
+              }
 
-              let BinanceTime = data.filter(x=>x.name==='Binance')[0].isLIVE;
+              let BinanceTime = data.filter(x=>x.name==='Binance')[0].dateTime;
               document.getElementById("binanceTime").innerText=BinanceTime;
               document.getElementById("binanceTimeM").innerText=BinanceTime;
 
               let Coinbase = data.filter(x=>x.name==='Coinbase')[0].isLIVE;
               document.getElementById("coinbase").innerText=Coinbase;
+              if (Coinbase === 'Yes') {
+                document.getElementById("coinbase").classList.add("status-yes");
+              } else {
+                document.getElementById("coinbase").classList.add("status-no");
+              }
 
-              let CoinbaseTime = data.filter(x=>x.name==='Coinbase')[0].isLIVE;
+              let CoinbaseTime = data.filter(x=>x.name==='Coinbase')[0].dateTime;
               document.getElementById("coinbaseTime").innerText=CoinbaseTime;
               document.getElementById("coinbaseTimeM").innerText=CoinbaseTime;
 
               let Bittrex = data.filter(x=>x.name==='Bittrex')[0].isLIVE;
               document.getElementById("bittrex").innerText=Bittrex;
+              if (Bittrex === true) {
+                document.getElementById("bittrex").classList.add("status-yes");
+              } else {
+                document.getElementById("bittrex").classList.add("status-no");
+              }
 
-              let BittrexTime = data.filter(x=>x.name==='Bittrex')[0].isLIVE;
+              let BittrexTime = data.filter(x=>x.name==='Bittrex')[0].dateTime;
               document.getElementById("bittrexTime").innerText=BittrexTime;
               document.getElementById("bittrexTimeM").innerText=BittrexTime;
 
               let Kraken = data.filter(x=>x.name==='Kraken')[0].isLIVE;
               document.getElementById("kraken").innerText=Kraken;
+              if (Kraken === true) {
+                document.getElementById("kraken").classList.add("status-yes");
+              } else {
+                document.getElementById("kraken").classList.add("status-no");
+              }
 
-              let KrakenTime = data.filter(x=>x.name==='Kraken')[0].isLIVE;
+              let KrakenTime = data.filter(x=>x.name==='Kraken')[0].dateTime;
               document.getElementById("krakenTime").innerText=KrakenTime;
               document.getElementById("krakenTimeM").innerText=KrakenTime;
 
               let Blockchain = data.filter(x=>x.name==='Blockchain')[0].isLIVE;
               document.getElementById("blockchain").innerText=Blockchain;
+              if (Blockchain === 'Yes') {
+                document.getElementById("blockchain").classList.add("status-yes");
+              } else {
+                document.getElementById("blockchain").classList.add("status-no");
+              }
 
-              let BlockchainTime = data.filter(x=>x.name==='Blockchain')[0].isLIVE;
+              let BlockchainTime = data.filter(x=>x.name==='Blockchain')[0].dateTime;
               document.getElementById("blockchainTime").innerText=BlockchainTime;
               document.getElementById("blockchainTimeM").innerText=BlockchainTime;
               
-              let Okcoin = data.filter(x=>x.name==='Okcoin')[0].isLIVE;
+              let Okcoin = data.filter(x=>x.name==='OkCoin')[0].isLIVE;
               document.getElementById("okcoin").innerText=Okcoin;
+              if (Okcoin === 'Yes') {
+                document.getElementById("okcoin").classList.add("status-yes");
+              } else {
+                document.getElementById("okcoin").classList.add("status-no");
+              }
 
-              let OkcoinTime = data.filter(x=>x.name==='Okcoin')[0].isLIVE;
+              let OkcoinTime = data.filter(x=>x.name==='OkCoin')[0].dateTime;
               document.getElementById("okcoinTime").innerText=OkcoinTime;
               document.getElementById("okcoinTimeM").innerText=OkcoinTime;
             });
@@ -199,149 +218,107 @@
         });
       </script>
       <div class="card-container">
-        <div class="card" data-aos="fade-up">
-          <!-- <div class="exchange-logo">
-            <img src="assets/images/Coinbase_Dark.svg">            
-          </div>
-          <div class="status-wrapper">
-            <span>Is it listed?</span>
-            <div class="status-button status-no">
-              No
-            </div>
-          </div>
-          <div class="last-update">
-            Last checked: 12:42:07 GMT
-          </div> -->
+        <div class="card" data-aos="fade-up">          
           <div class="exchange-logo">
             <img src="assets/images/Coinbase_Dark.svg">            
             <div class="last-update last-update-d">
-              <span class="gray-text">Last checked:</span><span id="coinbaseTime">18:45:07 GMT</span>
+              <span class="gray-text">Last checked:</span><span id="coinbaseTime"> </span>
             </div>
           </div>
           <div class="status-wrapper">
             <span>Is it listed?</span>
-            <div class="status-button status-no" id="coinbase">
+            <div class="status-button" id="coinbase">
               
             </div>
           </div>          
           <div class="last-update last-update-m">
-            <span class="gray-text">Last checked:</span><span id="coinbaseTimeM">18:45:07 GMT</span>
+            <span class="gray-text">Last checked:</span><span id="coinbaseTimeM"> </span>
           </div>
         </div>
-        <div class="card" data-aos="fade-up">
-          <!-- <div class="exchange-logo">
-            <img src="assets/images/binance.svg">
-          </div> -->
+        <div class="card" data-aos="fade-up">          
           <div class="exchange-logo">
             <img src="assets/images/binance.svg">            
             <div class="last-update last-update-d">
-              <span class="gray-text">Last checked:</span><span id="binanceTime">18:45:07 GMT</span>
+              <span class="gray-text">Last checked:</span><span id="binanceTime"> </span>
             </div>
           </div>
           <div class="status-wrapper">
             <span>Is it listed?</span>
-            <div class="status-button status-no" id="binance">
+            <div class="status-button" id="binance">
             </div>
           </div>
           <div class="last-update last-update-m">
-            <span class="gray-text">Last checked:</span><span id="binanceTimeM">18:45:07 GMT</span>
+            <span class="gray-text">Last checked:</span><span id="binanceTimeM"> </span>
           </div>
-          <!-- <div class="last-update">
-            Last checked: 12:42:07 GMT
-          </div> -->
         </div>
-        <div class="card" data-aos="fade-up">
-          <!-- <div class="exchange-logo">
-            <img src="assets/images/bittrex-logo-mark-default.svg">
-          </div> -->
+        <div class="card" data-aos="fade-up">          
           <div class="exchange-logo">
             <img src="assets/images/bittrex-logo-mark-default.svg">
             <div class="last-update last-update-d">
-              <span class="gray-text">Last checked:</span><span id="bittrexTime">18:45:07 GMT</span>
+              <span class="gray-text">Last checked:</span><span id="bittrexTime"> </span>
             </div>
           </div>
           <div class="status-wrapper">
             <span>Is it listed?</span>
-            <div class="status-button status-no" id="bittrex">
+            <div class="status-button" id="bittrex">
               
             </div>
           </div>
           <div class="last-update last-update-m">
-            <span class="gray-text">Last checked:</span><span id="bittrexTimeM">18:45:07 GMT</span>
+            <span class="gray-text">Last checked:</span><span id="bittrexTimeM"> </span>
           </div>
-          <!-- <div class="last-update">
-            Last checked: 12:42:07 GMT
-          </div>           -->
         </div>
         <div class="card" data-aos="fade-up">
-          <!-- <div class="exchange-logo">
-            <img src="assets/images/kraken-vector-logo.svg">
-          </div> -->
           <div class="exchange-logo">
             <img class="dark-kraken" src="assets/images/kraken-vector-logo.svg">
             <img class="light-kraken" src="assets/images/kraken-vector-logo-light.svg">
             <div class="last-update last-update-d">
-              <span class="gray-text">Last checked:</span><span id="krakenTime">18:45:07 GMT</span>
+              <span class="gray-text">Last checked:</span><span id="krakenTime"> </span>
             </div>
           </div>
           <div class="status-wrapper">
             <span>Is it listed?</span>
-            <div class="status-button status-no" id="kraken">
+            <div class="status-button" id="kraken">
               
             </div>
           </div>
           <div class="last-update last-update-m">
-            <span class="gray-text">Last checked:</span><span id="krakenTimeM">18:45:07 GMT</span>
+            <span class="gray-text">Last checked:</span><span id="krakenTimeM"> </span>
           </div>
-          <!-- <div class="last-update">
-            Last checked: 12:42:07 GMT
-          </div> -->
         </div>
         <div class="card" data-aos="fade-up">
-          <!-- <div class="exchange-logo">
-            <img src="assets/images/blockchaincom.svg">
-          </div> -->
           <div class="exchange-logo">
             <img src="assets/images/blockchaincom.svg">
             <div class="last-update last-update-d">
-              <span class="gray-text">Last checked:</span><span id="blockchainTime">18:45:07 GMT</span>
+              <span class="gray-text">Last checked:</span><span id="blockchainTime"> </span>
             </div>
           </div>
           <div class="status-wrapper">
             <span>Is it listed?</span>
-            <div class="status-button status-no" id="blockchain">
+            <div class="status-button" id="blockchain">
               
             </div>
           </div>
           <div class="last-update last-update-m">
-            <span class="gray-text">Last checked:</span><span id="blockchainTimeM">18:45:07 GMT</span>
-          </div>
-          <!-- <div class="last-update">
-            Last checked: 12:42:07 GMT
-          </div> -->
+            <span class="gray-text">Last checked:</span><span id="blockchainTimeM"> </span>
+          </div>          
         </div>
         <div class="card" data-aos="fade-up">
-          <!-- <div class="exchange-logo">
-            <img src="assets/images/okcoin-logo.png">
-          </div> -->
           <div class="exchange-logo">
             <img src="assets/images/okcoin-logo.png">
             <div class="last-update last-update-d">
-              <span class="gray-text">Last checked:</span><span id="okcoinTime">18:45:07 GMT</span>
+              <span class="gray-text">Last checked:</span><span id="okcoinTime"> </span>
             </div>
           </div>
           <div class="status-wrapper">
             <span>Is it listed?</span>
-            <div class="status-button status-no" id="okcoin">
+            <div class="status-button" id="okcoin">
               
             </div>
           </div>
           <div class="last-update last-update-m">
-            <span class="gray-text">Last checked:</span><span id="okcoinTimeM">18:45:07 GMT</span>
-          </div>
-          <!-- <div class="last-update">
-            Last checked: 12:42:07 GMT
-          </div> -->
+            <span class="gray-text">Last checked:</span><span id="okcoinTimeM"> </span>
+          </div>          
         </div>
       </div>      
       <div class="row-technical-newsletter">

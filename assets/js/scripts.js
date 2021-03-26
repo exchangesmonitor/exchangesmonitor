@@ -32,6 +32,7 @@ $(document).ready(function(){
   var $form = $('form');
   $form.submit(function(){
     $("button").addClass('is-done');
+    $("button").addClass('is-active');
     $("button").text('Subscribed');
     $("button").css('cursor','default');
      $.post($(this).attr('action'), $(this).serialize(), function(response){

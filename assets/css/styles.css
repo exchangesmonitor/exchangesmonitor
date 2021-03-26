@@ -246,6 +246,7 @@ html *, html *:before, html *:after {
     width: 80px;
     margin: 0 auto;
     margin-top: 20px;
+    background-color: #333;
 }
 .status-no {
     background-color: red;
