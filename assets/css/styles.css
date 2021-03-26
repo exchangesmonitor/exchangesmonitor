@@ -87,7 +87,7 @@ html {
     font-family: Helvetica, sans-serif;
     width: 100%;
     letter-spacing: 1px;
-    padding-bottom: 50px;
+    padding-bottom: 30px;
 }
 html *, html *:before, html *:after {
     box-sizing: inherit;
@@ -436,7 +436,9 @@ html *, html *:before, html *:after {
     display: flex;
     flex-direction: column;
 }
-
+.newsletter-title, .social-row-title, .technicals-title {
+    line-height: 1.25;
+}
 
 .row-technical-newsletter {
     display: flex;
@@ -579,6 +581,25 @@ footer {
     text-align: center;
     margin-top: 30px;
     font-size: 80%;
+}
+.social-row-logos svg {
+    margin-top: 10px;
+}
+@media only screen and (min-width: 767px) and (max-width: 1014px) {
+    .exchange-logo img {
+        height: auto;
+        width: 45%;
+    }
+    .gray-text {
+        display: block;
+        margin-bottom: 2px;
+    }
+}
+@media only screen and (min-width: 767px) and (max-width: 1235px) {
+    .gray-text {
+        display: block;
+        margin-bottom: 2px;
+    }
 }
 @media only screen and (max-width: 767px) {
     body {

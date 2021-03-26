@@ -31,9 +31,12 @@ $( ".toggle-color" ).click(function() {
 $(document).ready(function(){
   var $form = $('form');
   $form.submit(function(){
+    $("button").addClass('is-done');
+    $("button").text('Subscribed');
+    $("button").css('cursor','default');
      $.post($(this).attr('action'), $(this).serialize(), function(response){
            // do something here on success
-           $("button").addClass('is-done','is-active');
+           console.log("did it");           
      },'json');
      return false;
   });
