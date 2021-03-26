@@ -23,22 +23,31 @@
 //   }, 500);
 // });
 
-$( ".toggle-color" ).click(function() {
-  console.log("mode switch");
-  $('body').toggleClass("lightmode");
-});
+// $( ".toggle-color" ).click(function() {
+//   console.log("mode switch");
+//   $('body').toggleClass("lightmode");
+// });
 
-$(document).ready(function(){
-  var $form = $('form');
+$(document).ready(function(){  
+
+  var $form = $('form');  
+
+  $( "input" ).focus(function() {
+    $("#button").addClass("make-visible");
+  })
+
   $form.submit(function(){
-    $("button").addClass('is-done');
-    $("button").addClass('is-active');
-    $("button").text('Subscribed');
-    $("button").css('cursor','default');
+    $("button").addClass("is-done");
+    $("button").addClass("is-active");
+    $("button").text("Subscribed");
+    $("button").css("cursor","default");
+    $("#button").css("opacity","1");
+    console.log("submitted");
      $.post($(this).attr('action'), $(this).serialize(), function(response){
            // do something here on success
            console.log("did it");           
      },'json');
      return false;
   });
+
 });
