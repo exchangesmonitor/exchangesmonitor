@@ -643,7 +643,7 @@ form {
     text-transform: uppercase;
     transform-origin: left center;
     transition: transform 0.25s ease-out, color 0.25s ease-out;
-    font-size: 85%;
+    font-size: 75%;
     pointer-events: none;
   }  
   
@@ -875,6 +875,7 @@ footer {
     transform: translate(-50%, -50%);
     background: white;
     text-align: center;
+    z-index: 999999;
   }
   .modal-window header {
     font-weight: bold;
@@ -945,4 +946,11 @@ footer {
 
 .make-visible {
     pointer-events: all !important;
+}
+.modal-close-bg {
+    width: 100%;
+    height: 100%;
+    content: '';
+    display: block;    
+    z-index: 1000;
 }
