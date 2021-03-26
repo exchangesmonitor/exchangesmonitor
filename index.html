@@ -141,7 +141,6 @@
             
             socket.emit("data");
             socket.on('data', function (data) {
-              console.log(data)
               let Binance = data.filter(x=>x.name==='Binance')[0].isLIVE;
               document.getElementById("binance").innerText=Binance;
               if (Binance === 'Yes') {
