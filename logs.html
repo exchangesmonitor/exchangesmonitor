@@ -1,0 +1,42 @@
+<html>
+
+<head>
+  <script src="https://cdn.jsdelivr.net/npm/socket.io-client@2/dist/socket.io.js"></script>
+  <script src="https://code.jquery.com/jquery-1.11.1.js"></script>
+  <script>
+    // $(function () {
+    //   $(function () {
+    //     //ec2 instance URL
+    //     var socket = io("http://ec2-18-218-86-16.us-east-2.compute.amazonaws.com:3000/xrpNews");
+        
+    //     socket.emit("data");
+    //     socket.on('data', function (msg) {
+    //       //this is your data to use in the website
+    //       console.log(msg)
+    //     });
+    //   });
+    // });
+    function loadDoc(url) {
+  var xhttp = new XMLHttpRequest();
+  xhttp.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+     console.log(this.responseText);
+     console.log(JSON.stringify(this.responseText))
+    }
+  };
+  xhttp.open("GET", url, true);
+  xhttp.send();
+}
+
+loadDoc('http://ec2-18-218-86-16.us-east-2.compute.amazonaws.com:3000/info');
+loadDoc('http://ec2-3-17-25-109.us-east-2.compute.amazonaws.com:3000/log?count=10');
+  </script>
+</head>
+
+<body>
+  <div class="data">
+
+  </div>
+</body>
+
+</html>
