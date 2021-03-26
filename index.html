@@ -133,13 +133,28 @@
       <script>
         $(function () {
           $(function () {
-            //ec2 instance URL
             var socket = io("http://ec2-18-218-86-16.us-east-2.compute.amazonaws.com:3000/xrpNews");
             
             socket.emit("data");
             socket.on('data', function (msg) {
-              //this is your data to use in the website
               console.log(msg)
+              let Binance = data.filter(x=>x.name==='Binance')[0].isLIVE;
+              document.getElementById("binance").innerText=Binance;
+
+              let Coinbase = data.filter(x=>x.name==='Coinbase')[0].isLIVE;
+              document.getElementById("coinbase").innerText=Coinbase;
+
+              let Bittrex = data.filter(x=>x.name==='Bittrex')[0].isLIVE;
+              document.getElementById("bittrex").innerText=Bittrex;
+
+              let Kraken = data.filter(x=>x.name==='Kraken')[0].isLIVE;
+              document.getElementById("kraken").innerText=Kraken;
+
+              let Blockchain = data.filter(x=>x.name==='Coinbase')[0].isLIVE;
+              document.getElementById("blockchain").innerText=Blockchain;
+              
+              let Okcoin = data.filter(x=>x.name==='Okcoin')[0].isLIVE;
+              document.getElementById("okcoin").innerText=Okcoin;
             });
           });
         });
@@ -166,8 +181,8 @@
           </div>
           <div class="status-wrapper">
             <span>Is it listed?</span>
-            <div class="status-button status-no">
-              No
+            <div class="status-button status-no" id="coinbase">
+              
             </div>
           </div>          
           <div class="last-update last-update-m">
@@ -186,8 +201,7 @@
           </div>
           <div class="status-wrapper">
             <span>Is it listed?</span>
-            <div class="status-button status-no">
-              No
+            <div class="status-button status-no" id="binance">
             </div>
           </div>
           <div class="last-update last-update-m">
@@ -209,8 +223,8 @@
           </div>
           <div class="status-wrapper">
             <span>Is it listed?</span>
-            <div class="status-button status-no">
-              No
+            <div class="status-button status-no" id="bittrex">
+              
             </div>
           </div>
           <div class="last-update last-update-m">
@@ -233,8 +247,8 @@
           </div>
           <div class="status-wrapper">
             <span>Is it listed?</span>
-            <div class="status-button status-no">
-              No
+            <div class="status-button status-no" id="kraken">
+              
             </div>
           </div>
           <div class="last-update last-update-m">
@@ -256,8 +270,8 @@
           </div>
           <div class="status-wrapper">
             <span>Is it listed?</span>
-            <div class="status-button status-no">
-              No
+            <div class="status-button status-no" id="blockchain">
+              
             </div>
           </div>
           <div class="last-update last-update-m">
@@ -279,8 +293,8 @@
           </div>
           <div class="status-wrapper">
             <span>Is it listed?</span>
-            <div class="status-button status-no">
-              No
+            <div class="status-button status-no" id="okcoin">
+              
             </div>
           </div>
           <div class="last-update last-update-m">
