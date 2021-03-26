@@ -211,7 +211,7 @@ html *, html *:before, html *:after {
 .last-update {
     font-size: 70%;
     width: 100%;
-    letter-spacing: 1px;
+    letter-spacing: 0;
     color: #fff;
     font-weight: 700;
     text-align: center;    
@@ -499,7 +499,7 @@ form {
     text-transform: capitalize;
   }
   button {
-    display: none;
+
     position: absolute;
     right: 0;
     width: 150px;

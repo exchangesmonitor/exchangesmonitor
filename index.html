@@ -24,10 +24,10 @@
         <img src="assets/images/xrp-logo.svg">
         <div class="xrp-data">
           <div class="xrp-price">
-            CURRENT PRICE: $0.5088
+            CURRENT PRICE: $<crypto-widget type="inline" template="generic" color="default" assets="XRP~USD" markup="{price}" api="cryptocompare.com" realtime="true" animation="flash"></crypto-widget>
           </div>
           <div class="xrp-percent">
-            <span>6.17%</span>
+            <span><crypto-widget type="inline" template="generic" color="default" assets="XRP~USD" markup="{change_pct_24h}" api="cryptocompare.com" realtime="true" animation="flash"></crypto-widget></span>
             <svg width="12" height="7" viewBox="0 0 12 7" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path d="M11.2958 5.42288L6.48338 0.610448C6.34745 0.47436 6.18634 0.406372 6.00002 0.406372C5.8137 0.406372 5.65263 0.47436 5.51654 0.610448L0.704076 5.42288C0.567988 5.55896 0.5 5.72007 0.5 5.90624C0.5 6.09241 0.567988 6.25363 0.704076 6.38961C0.840316 6.52569 1.00139 6.59372 1.18755 6.59372H10.8124C10.9987 6.59372 11.1598 6.52569 11.2958 6.38961C11.4318 6.25367 11.5 6.09244 11.5 5.90624C11.5 5.72004 11.4318 5.55896 11.2958 5.42288Z"/>
             </svg>            
@@ -279,7 +279,7 @@
         <div class="technical-card" data-aos="fade-up">
           <div class="latest-technical">
             <div class="technicals-title">Our latest Daily XRP Technical Analysis</div>
-            <blockquote data-aos="fade-up" class="twitter-tweet" data-theme="dark"><p lang="en" dir="ltr">XRP Daily Technical Outlook:<a href="https://twitter.com/search?q=%24XRP&amp;src=ctag&amp;ref_src=twsrc%5Etfw">$XRP</a> and XRPBTC both closed bearish but it was expected today. XRPBTC tested 0.0000091 BTC today as I mentioned but Bitcoin’s sharp decline caused a dip in XRP which is also testing the old resistance target as support. This is healthy price action 🧙‍♂️ <a href="https://t.co/0PXqFJN1Gs">pic.twitter.com/0PXqFJN1Gs</a></p>&mdash; CRYPTOWZRD (@cryptoWZRD_) <a href="https://twitter.com/cryptoWZRD_/status/1374917727689707520?ref_src=twsrc%5Etfw">March 25, 2021</a></blockquote data-aos="fade-up"> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+            <blockquote class="twitter-tweet" data-theme="dark"><p lang="en" dir="ltr">XRP Daily Technical Outlook:<a href="https://twitter.com/search?q=%24XRP&amp;src=ctag&amp;ref_src=twsrc%5Etfw">$XRP</a> and XRPBTC both closed bullish as I mentioned yesterday. 0.0000091 BTC will be the support target here and we&#39;ll see a great bullish move in XRP as soon as Bitcoin finds a support. I&#39;ll be looking for a scalp on the intraday chart tomorrow 🧙‍♂️ <a href="https://t.co/zbfRvBD08M">pic.twitter.com/zbfRvBD08M</a></p>&mdash; CRYPTOWZRD (@cryptoWZRD_) <a href="https://twitter.com/cryptoWZRD_/status/1375278910900895749?ref_src=twsrc%5Etfw">March 26, 2021</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>            
           </div>
         </div>
 
@@ -287,10 +287,12 @@
         <div class="newsletter-row third-height">        
           <div class="newsletter-card">
             <div class="newsletter-title">Subscribe to be notified as soon XRP is relisted</div>
-            <form>
-              <input type="email" id="email"/>
+            <form action="https://cryptowzrd.us20.list-manage.com/subscribe/post" method="POST">
+              <input type="hidden" name="u" value="1358406b41421ca8616efb98b">
+              <input type="hidden" name="id" value="62efb37e28">
+              <input type="email" name="MERGE0" id="MERGE0">
               <label for="email">email address</label>
-              <button id="button">Notify Me</button>
+              <button name="submit" value="Subscribe" type="submit" id="button">Notify Me</button>
             </form>
           </div>
         </div>
@@ -333,7 +335,7 @@
     </div>    
     </main>
     <footer>
-      Copyright &copy;2020 CryptoWzrd. All Rights Reserved
+      Copyright &copy;2021 CryptoWzrd. All Rights Reserved
     </footer>
   <script src="./assets/js/scripts.js"></script>  
   <script>
@@ -360,5 +362,12 @@
 
     });
   </script>
+  <script>
+    var premiumCryptocurrencyWidgets = {
+        pluginUrl: './pcw',
+        cryptoComareApiKey: '9983a2aec496eaa39e38874f7d968fdcfa2ce14ded8afe7bfe5135e9d04d42cc'
+    }
+  </script>
+  <script src="./pcw/assets/js/dist/app.js"></script>
 </body>
 </html>
