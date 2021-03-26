@@ -142,20 +142,44 @@
               let Binance = data.filter(x=>x.name==='Binance')[0].isLIVE;
               document.getElementById("binance").innerText=Binance;
 
+              let BinanceTime = data.filter(x=>x.name==='Binance')[0].isLIVE;
+              document.getElementById("binanceTime").innerText=BinanceTime;
+              document.getElementById("binanceTimeM").innerText=BinanceTime;
+
               let Coinbase = data.filter(x=>x.name==='Coinbase')[0].isLIVE;
               document.getElementById("coinbase").innerText=Coinbase;
+
+              let CoinbaseTime = data.filter(x=>x.name==='Coinbase')[0].isLIVE;
+              document.getElementById("coinbaseTime").innerText=CoinbaseTime;
+              document.getElementById("coinbaseTimeM").innerText=CoinbaseTime;
 
               let Bittrex = data.filter(x=>x.name==='Bittrex')[0].isLIVE;
               document.getElementById("bittrex").innerText=Bittrex;
 
+              let BittrexTime = data.filter(x=>x.name==='Bittrex')[0].isLIVE;
+              document.getElementById("bittrexTime").innerText=BittrexTime;
+              document.getElementById("bittrexTimeM").innerText=BittrexTime;
+
               let Kraken = data.filter(x=>x.name==='Kraken')[0].isLIVE;
               document.getElementById("kraken").innerText=Kraken;
 
-              let Blockchain = data.filter(x=>x.name==='Coinbase')[0].isLIVE;
+              let KrakenTime = data.filter(x=>x.name==='Kraken')[0].isLIVE;
+              document.getElementById("krakenTime").innerText=KrakenTime;
+              document.getElementById("krakenTimeM").innerText=KrakenTime;
+
+              let Blockchain = data.filter(x=>x.name==='Blockchain')[0].isLIVE;
               document.getElementById("blockchain").innerText=Blockchain;
+
+              let BlockchainTime = data.filter(x=>x.name==='Blockchain')[0].isLIVE;
+              document.getElementById("blockchainTime").innerText=BlockchainTime;
+              document.getElementById("blockchainTimeM").innerText=BlockchainTime;
               
               let Okcoin = data.filter(x=>x.name==='Okcoin')[0].isLIVE;
               document.getElementById("okcoin").innerText=Okcoin;
+
+              let OkcoinTime = data.filter(x=>x.name==='Okcoin')[0].isLIVE;
+              document.getElementById("okcoinTime").innerText=OkcoinTime;
+              document.getElementById("okcoinTimeM").innerText=OkcoinTime;
             });
           });
         });
@@ -177,7 +201,7 @@
           <div class="exchange-logo">
             <img src="assets/images/Coinbase_Dark.svg">            
             <div class="last-update last-update-d">
-              <span class="gray-text">Last checked:</span> 18:45:07 GMT
+              <span class="gray-text">Last checked:</span><span id="coinbaseTime">18:45:07 GMT</span>
             </div>
           </div>
           <div class="status-wrapper">
@@ -187,7 +211,7 @@
             </div>
           </div>          
           <div class="last-update last-update-m">
-            <span class="gray-text">Last checked:</span> 18:45:07 GMT
+            <span class="gray-text">Last checked:</span><span id="coinbaseTimeM">18:45:07 GMT</span>
           </div>
         </div>
         <div class="card" data-aos="fade-up">
@@ -197,7 +221,7 @@
           <div class="exchange-logo">
             <img src="assets/images/binance.svg">            
             <div class="last-update last-update-d">
-              <span class="gray-text">Last checked:</span> 18:45:07 GMT
+              <span class="gray-text">Last checked:</span><span id="binanceTime">18:45:07 GMT</span>
             </div>
           </div>
           <div class="status-wrapper">
@@ -206,7 +230,7 @@
             </div>
           </div>
           <div class="last-update last-update-m">
-            <span class="gray-text">Last checked:</span> 18:45:07 GMT
+            <span class="gray-text">Last checked:</span><span id="binanceTimeM">18:45:07 GMT</span>
           </div>
           <!-- <div class="last-update">
             Last checked: 12:42:07 GMT
@@ -219,7 +243,7 @@
           <div class="exchange-logo">
             <img src="assets/images/bittrex-logo-mark-default.svg">
             <div class="last-update last-update-d">
-              <span class="gray-text">Last checked:</span> 18:45:07 GMT
+              <span class="gray-text">Last checked:</span><span id="bittrexTime">18:45:07 GMT</span>
             </div>
           </div>
           <div class="status-wrapper">
@@ -229,7 +253,7 @@
             </div>
           </div>
           <div class="last-update last-update-m">
-            <span class="gray-text">Last checked:</span> 18:45:07 GMT
+            <span class="gray-text">Last checked:</span><span id="bittrexTimeM">18:45:07 GMT</span>
           </div>
           <!-- <div class="last-update">
             Last checked: 12:42:07 GMT
@@ -243,7 +267,7 @@
             <img class="dark-kraken" src="assets/images/kraken-vector-logo.svg">
             <img class="light-kraken" src="assets/images/kraken-vector-logo-light.svg">
             <div class="last-update last-update-d">
-              <span class="gray-text">Last checked:</span> 18:45:07 GMT
+              <span class="gray-text">Last checked:</span><span id="krakenTime">18:45:07 GMT</span>
             </div>
           </div>
           <div class="status-wrapper">
@@ -253,7 +277,7 @@
             </div>
           </div>
           <div class="last-update last-update-m">
-            <span class="gray-text">Last checked:</span> 18:45:07 GMT
+            <span class="gray-text">Last checked:</span><span id="krakenTimeM">18:45:07 GMT</span>
           </div>
           <!-- <div class="last-update">
             Last checked: 12:42:07 GMT
@@ -266,7 +290,7 @@
           <div class="exchange-logo">
             <img src="assets/images/blockchaincom.svg">
             <div class="last-update last-update-d">
-              <span class="gray-text">Last checked:</span> 18:45:07 GMT
+              <span class="gray-text">Last checked:</span><span id="blockchainTime">18:45:07 GMT</span>
             </div>
           </div>
           <div class="status-wrapper">
@@ -276,7 +300,7 @@
             </div>
           </div>
           <div class="last-update last-update-m">
-            <span class="gray-text">Last checked:</span> 18:45:07 GMT
+            <span class="gray-text">Last checked:</span><span id="blockchainTimeM">18:45:07 GMT</span>
           </div>
           <!-- <div class="last-update">
             Last checked: 12:42:07 GMT
@@ -289,7 +313,7 @@
           <div class="exchange-logo">
             <img src="assets/images/okcoin-logo.png">
             <div class="last-update last-update-d">
-              <span class="gray-text">Last checked:</span> 18:45:07 GMT
+              <span class="gray-text">Last checked:</span><span id="okcoinTime">18:45:07 GMT</span>
             </div>
           </div>
           <div class="status-wrapper">
@@ -299,7 +323,7 @@
             </div>
           </div>
           <div class="last-update last-update-m">
-            <span class="gray-text">Last checked:</span> 18:45:07 GMT
+            <span class="gray-text">Last checked:</span><span id="okcoinTimeM">18:45:07 GMT</span>
           </div>
           <!-- <div class="last-update">
             Last checked: 12:42:07 GMT
