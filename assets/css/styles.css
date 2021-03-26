@@ -580,8 +580,11 @@ form {
     font-size: 75%;
     text-transform: capitalize;
   }
+  .inner-card-text {
+      line-height: 1.25;
+  }
   button {
-
+      display: none;
     position: absolute;
     right: 0;
     width: 150px;
@@ -625,6 +628,7 @@ form {
     transform-origin: left center;
     transition: transform 0.25s ease-out, color 0.25s ease-out;
     font-size: 85%;
+    pointer-events: none;
   }  
   
   button.is-active {
