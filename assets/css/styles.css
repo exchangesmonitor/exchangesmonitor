@@ -110,6 +110,7 @@ html *, html *:before, html *:after {
     -moz-animation: fadeInFromNone 1.3s ease-out;
     -o-animation: fadeInFromNone 1.3s ease-out;
     animation: fadeInFromNone 1.3s ease-out;
+    z-index: 9999;
 }
 .cryptowzrd-logo {
     width: 33%;
@@ -334,6 +335,10 @@ html *, html *:before, html *:after {
 }
 .lightmode .gray-text {
     color: #FFCB69;
+}
+.disclaimer-btn {
+    margin-top: 10px;
+    cursor: pointer;
 }
 @-webkit-keyframes fadeInFromNone {
     0% {
@@ -823,4 +828,94 @@ footer {
     .cryptowzrd-row {
         margin-top: 16px;
     }    
+}
+
+
+.modal-window {
+    position: fixed;
+    background-color: rgba(255, 255, 255, 0.5);
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 999;
+    visibility: hidden;
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.3s;
+  }
+  .modal-window:target {
+    visibility: visible;
+    opacity: 1;
+    pointer-events: auto;
+  }
+  .modal-window > div {
+    width: 400px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 2em;
+    background: white;
+  }
+  .modal-window header {
+    font-weight: bold;
+  }
+  .modal-window h1 {
+    font-size: 150%;
+    margin: 0 0 15px;
+  }
+  
+  .modal-close {
+    color: #aaa;
+    line-height: 50px;
+    font-size: 150%;
+    position: absolute;
+    right: 0;
+    text-align: center;
+    top: 0;
+    width: 50px;
+    text-decoration: none;
+  }
+  .modal-close:hover {
+    color: black;
+  }
+  
+ 
+.container {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  
+  .modal-window > div {    
+    border-radius: 8px;
+    background: linear-gradient(to bottom, #141414 0%, #0a0a0a 100%);
+    padding: 30px;
+    width: 90%;
+    max-width: 600px;    
+  }  
+  
+  .modal-window div:not(:last-of-type) {
+    margin-bottom: 15px;
+  }
+  
+  small {
+    color: lightgray;
+  }
+  
+  .btn {
+    color: #737373;
+    text-decoration: none;
+  }
+  .btn i {
+    padding-right: 0.3em;
+  }
+  footer .btn {
+      margin-top: 10px;
+      line-height: 1.5;
+  }
+.lightmode .modal-window > div {  
+    background: linear-gradient(123.99deg, #7416EF 25.46%, #824BFF 110.27%);
 }
