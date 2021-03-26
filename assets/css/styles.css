@@ -305,7 +305,7 @@ html *, html *:before, html *:after {
     
 }
 .lightmode .card, .lightmode .technical-card, .lightmode .newsletter-card, .lightmode .cryptowzrd-row, .lightmode .socials-card {
-    background: linear-gradient(123.99deg, #7416EF 25.46%, #824BFF 110.27%);
+    background: linear-gradient(123.99deg, #7416EF 25.46%, #824BFF 110.27%) !important;
 }
 .lightmode .xrp-coin img {
     filter: invert(1);
