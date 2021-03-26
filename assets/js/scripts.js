@@ -19,10 +19,11 @@ button.addEventListener('click', function(e){
   this.classList.add('is-done','is-active');
   
   setTimeout(function(){ 
-    button.innerHTML = "Thanks! Check Your Email."
+    button.innerHTML = "Subscribed"
   }, 500);
 });
 
 $( ".toggle-color" ).click(function() {
-  $(body).toggleClass("darkmode");
+  console.log("mode switch");
+  $('body').toggleClass("lightmode");
 });
