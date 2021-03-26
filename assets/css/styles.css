@@ -897,7 +897,7 @@ footer {
     text-decoration: none;
   }
   .modal-close:hover {
-    color: black;
+    color: #8a8a8a;
   }
   
  
@@ -954,6 +954,7 @@ footer {
     display: block;    
     z-index: 1000;
 }
+
 /* .technical-card {
     position: relative;
 }
