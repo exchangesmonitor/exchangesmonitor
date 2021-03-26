@@ -23,10 +23,10 @@
 //   }, 500);
 // });
 
-// $( ".toggle-color" ).click(function() {
-//   console.log("mode switch");
-//   $('body').toggleClass("lightmode");
-// });
+$( ".toggle-color" ).click(function() {
+  console.log("mode switch");
+  $('body').toggleClass("lightmode");
+});
 
 $(document).ready(function(){  
 
