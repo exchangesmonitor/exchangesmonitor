@@ -98,9 +98,11 @@ html *, html *:before, html *:after {
     position: relative;
 }
 .toggle-color {
+    padding: 5px;
     position: absolute;
     top: 30px;
     left: 50%;
+    margin-top: -5px;
     transform: translate(-50%, 0%);
 	-webkit-transform: translate(-50%, 0%);
 	-moz-transform: translate(-50%, 0%);
@@ -283,6 +285,7 @@ html *, html *:before, html *:after {
 }
 .inner-card-text {
     margin: auto;
+    text-align: center;
 }
 .card-title img {
     width: 100px;
@@ -865,8 +868,8 @@ footer {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    padding: 2em;
     background: white;
+    text-align: center;
   }
   .modal-window header {
     font-weight: bold;
@@ -902,7 +905,7 @@ footer {
   .modal-window > div {    
     border-radius: 8px;
     background: linear-gradient(to bottom, #141414 0%, #0a0a0a 100%);
-    padding: 30px;
+    padding: 40px 30px;
     width: 90%;
     max-width: 600px;    
   }  
