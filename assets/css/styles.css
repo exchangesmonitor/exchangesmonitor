@@ -190,6 +190,9 @@ html *, html *:before, html *:after {
     flex-wrap: wrap;
     margin-top: 50px;
 }
+.pcw-down {
+    color: #ff3132;
+}
 .card {
     width: 32%;
     border-radius: 8px;
