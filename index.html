@@ -131,7 +131,7 @@
       <script>
         $(function () {
           $(function () {
-            var socket = io("https://xrprelist.cryptowzrd.com:3000/xrpNews");
+            var socket = io("https://xrprelist.cryptowzrd.com/xrpNews");
             
             socket.emit("data");
             socket.on('data', function (data) {
