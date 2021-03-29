@@ -355,6 +355,7 @@ html *, html *:before, html *:after {
     color: #fff;
     margin: 0 auto;
     margin-top: 20px;
+    padding: 10px 0;
 }
 .lightmode .status-placeholder {
     color: #000;
