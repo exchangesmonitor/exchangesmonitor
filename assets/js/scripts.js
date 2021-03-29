@@ -51,14 +51,16 @@ $(document).ready(function(){
   $( "input" ).focus(function() {
     $("label").addClass("moveLabel");
     $(".button").addClass("showButton")
+    $(".button").addClass("buttonPointer")
     // $( "label" ).animate({      
     // }, 1000, function() {
     // });
   });
   $( "input" ).blur(function() {
-    setTimeout(function(){ 
-      $("label").removeClass("moveLabel");
+    setTimeout(function(){      
+      $("label").removeClass("moveLabel"); 
       $(".button").removeClass("showButton")
-    }, 500);    
+      $(".button").addClass("buttonPointer")
+    }, 300);    
   });
 });

@@ -649,6 +649,8 @@ input:focus ~ label {
 }
 .showButton {
     opacity: 1;
+}
+.buttonPointer {
     pointer-events: all;
     touch-action: auto;
 }
