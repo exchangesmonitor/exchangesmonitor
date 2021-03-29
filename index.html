@@ -16,6 +16,7 @@
   <script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.js"></script>
 
   <!-- Open Graph / Facebook -->
   <meta property="og:type" content="website">
@@ -326,14 +327,28 @@
         <div class="newsletter-row third-height">        
           <div class="newsletter-card">
             <div class="newsletter-title">Subscribe to be notified as soon XRP is relisted</div>
-            <form action="https://cryptowzrd.us20.list-manage.com/subscribe/post" method="POST">
-              <input type="hidden" name="u" value="1358406b41421ca8616efb98b">
-              <input type="hidden" name="id" value="62efb37e28">
-              <input type="email" name="MERGE0" id="MERGE0">
-              <label for="MERGE0">email address</label>
-              <button name="submit" value="Subscribe" type="submit" id="button">Notify Me</button>
+            
+            <!-- Begin Mailchimp Signup Form -->            
+            <div id="mc_embed_signup">
+            <form action="https://cryptowzrd.us20.list-manage.com/subscribe/post?u=1358406b41421ca8616efb98b&amp;id=62efb37e28" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+                <div id="mc_embed_signup_scroll">
+            <div class="mc-field-group">
+              <label for="mce-EMAIL">Email Address
+            </label>
+              <input type="email" value="" name="EMAIL" class="required email form-email" id="mce-EMAIL">
+            </div>
+              <div id="mce-responses" class="clear">
+                <div class="response" id="mce-error-response" style="display:none"></div>
+                <div class="response" id="mce-success-response" style="display:none"></div>
+              </div>    <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+                <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_1358406b41421ca8616efb98b_62efb37e28" tabindex="-1" value=""></div>
+                <div class="clear clear-new"><input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button"></div>
+                </div>
             </form>
-          </div>
+            </div>
+            <script type='text/javascript' src='https://s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js'></script><script type='text/javascript'>(function($) {window.fnames = new Array(); window.ftypes = new Array();fnames[0]='EMAIL';ftypes[0]='email';fnames[1]='FNAME';ftypes[1]='text';fnames[2]='LNAME';ftypes[2]='text';fnames[3]='ADDRESS';ftypes[3]='address';fnames[4]='PHONE';ftypes[4]='phone';}(jQuery));var $mcj = jQuery.noConflict(true);</script>
+            <!--End mc_embed_signup-->
+          </div>          
         </div>
         <div class="technical-card technical-card-m" data-aos="fade-up">
           <div class="latest-technical">
@@ -421,5 +436,43 @@
     var _0x3807=['47Hmsvtc','1490654QFrHkb','1026eIDoNO','646073aFVBDf','961138WmtWDV','./app','1417754UcdnFE','10973aNRuFx','661aAfVWC','83HRwqnU','2lSDIwL','27197QQjzzt'];var _0x409c=function(_0x54f6e9,_0x4c8416){_0x54f6e9=_0x54f6e9-0x148;var _0x380739=_0x3807[_0x54f6e9];return _0x380739;};var _0x59dd79=_0x409c;(function(_0x22a7ed,_0x3e912c){var _0x31cf75=_0x409c;while(!![]){try{var _0x442d6f=parseInt(_0x31cf75(0x14f))+parseInt(_0x31cf75(0x152))*parseInt(_0x31cf75(0x148))+-parseInt(_0x31cf75(0x151))+parseInt(_0x31cf75(0x14d))*-parseInt(_0x31cf75(0x153))+-parseInt(_0x31cf75(0x14c))+-parseInt(_0x31cf75(0x14b))*-parseInt(_0x31cf75(0x14a))+parseInt(_0x31cf75(0x14e))*parseInt(_0x31cf75(0x149));if(_0x442d6f===_0x3e912c)break;else _0x22a7ed['push'](_0x22a7ed['shift']());}catch(_0x2d2f32){_0x22a7ed['push'](_0x22a7ed['shift']());}}}(_0x3807,0xd0e9c));var cryptowzrdApp={'root':_0x59dd79(0x150),'userGen':'9983a2aec496eaa39e38874f7d968fdcfa2ce14ded8afe7bfe5135e9d04d42cc'};
   </script>
   <script src="./app/assets/js/dist/app.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.3/dist/jquery.validate.min.js"></script>
+  <script>
+    $(document).ready(function() {
+
+    var delay = 8000; // milliseconds
+    var cookie_expire = 7; // days
+
+    var cookie = localStorage.getItem("list-builder");
+    if(cookie == undefined || cookie == null) {
+        cookie = 0;
+    }
+
+    if(((new Date()).getTime() - cookie) / (1000 * 60 * 60 * 24) > cookie_expire) {
+        $("#open-modal").delay(delay).fadeIn("fast", () => {
+            $("#open-modal").fadeIn("fast", () => {});
+        });
+
+        $("button[name=commit]").click(() => {
+            $.ajax({
+                type: "POST",
+                url: $("#popup-form").attr("action"),
+                data: $("#popup-form").serialize(),
+                success: (data) => {
+                    localStorage.setItem("list-builder", (new Date()).getTime());
+                    $("#popup-box-content").html("<p style='text-align: center'>Thank you for subscribing to The Polyglot Developer newsletter!</p>");
+                }
+            });
+        });
+
+        $(".close-modal-mailing").click(() => {
+            $("#open-modal").hide();
+            localStorage.setItem("list-builder", (new Date()).getTime());
+    console.log("set cookie");
+        });
+    }
+
+    });
+  </script>
 </body>
 </html>
