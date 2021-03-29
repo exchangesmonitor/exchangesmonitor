@@ -915,6 +915,9 @@ footer {
     button {
         width: 100px;
     }
+    .w-100 button {
+        widows: 100%;
+    }
     input {
         padding-right: 110px;
     }
@@ -950,6 +953,9 @@ footer {
         padding: 0;
         width: 110px;
         border-radius: 0 !important;
+    }
+    .w-100 .button-real {
+        width: 100%;
     }
     .form-email {
         padding-right: 120px;
