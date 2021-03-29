@@ -939,6 +939,13 @@ footer {
     .cryptowzrd-row {
         margin-top: 16px;
     }    
+    .button-real {
+        padding: 0;
+        width: 110px;
+    }
+    .form-email {
+        padding-right: 120px;
+    }
 }
 
 
