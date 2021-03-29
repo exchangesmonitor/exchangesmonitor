@@ -638,7 +638,7 @@ input:focus ~ label {
   text-transform: uppercase;
   font-weight: 900;
   -webkit-appearance: none;
-  -webkit-border-radius: 0;
+  -webkit-border-radius: 4px;
 }
 .clear-new {
     height: 100%;
