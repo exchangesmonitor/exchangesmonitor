@@ -24,7 +24,6 @@
 // });
 
 $( ".toggle-color" ).click(function() {
-  console.log("mode switch");
   $('body').toggleClass("lightmode");
 });
 
@@ -57,7 +56,9 @@ $(document).ready(function(){
     // });
   });
   $( "input" ).blur(function() {
-    $("label").removeClass("moveLabel");
-    $(".button").removeClass("showButton")
+    setTimeout(function(){ 
+      $("label").removeClass("moveLabel");
+      $(".button").removeClass("showButton")
+    }, 500);    
   });
 });
