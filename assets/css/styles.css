@@ -637,6 +637,8 @@ input:focus ~ label {
   transition: opacity 0.35s ease-out, width 0.5s ease-out, background 0.25s ease-out;
   text-transform: uppercase;
   font-weight: 900;
+  -webkit-appearance: none;
+  -webkit-border-radius: 0;
 }
 .clear-new {
     height: 100%;
