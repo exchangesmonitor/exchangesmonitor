@@ -546,7 +546,7 @@ html *, html *:before, html *:after {
 
 /* newsletter */
 
-form {
+form, .form {
     position: relative;
     height: 55px;
     width: 100%;
@@ -642,10 +642,10 @@ input:focus ~ label {
 .w-100 {
     width: 100%;
 }
-#mce-responses {
+#mce-responses, #mce-responses-modal {
     display: none !important;
 }
-#mc_embed_signup {
+#mc_embed_signup, #mc_embed_signup-modal {
     margin: auto 0;
 }
 
@@ -882,7 +882,7 @@ footer {
     .last-update-m {
         padding-bottom: 15px;
     }
-    form {
+    form, .form {
         height: 50px;
         margin-top: 20px;
     }
@@ -1071,4 +1071,12 @@ footer {
     top: 3px;
     width: 12px;
     height: 7px;
+}
+#open-modal-email {
+    z-index: 9999;
+}
+.opened {
+    visibility: visible;
+    opacity: 1;
+    pointer-events: all;
 }
