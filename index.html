@@ -160,17 +160,17 @@
               document.getElementById("coinbaseTime").innerText=CoinbaseTime;
               document.getElementById("coinbaseTimeM").innerText=CoinbaseTime;
 
-              let Bittrex = data.filter(x=>x.name==='Bittrex')[0].isLIVE;
-              document.getElementById("bittrex").innerText=Bittrex;
-              if (Bittrex === true) {
-                document.getElementById("bittrex").classList.add("status-yes");
-              } else {
-                document.getElementById("bittrex").classList.add("status-no");
-              }
+              // let Bittrex = data.filter(x=>x.name==='Bittrex')[0].isLIVE;
+              // document.getElementById("bittrex").innerText=Bittrex;
+              // if (Bittrex === true) {
+              //   document.getElementById("bittrex").classList.add("status-yes");
+              // } else {
+              //   document.getElementById("bittrex").classList.add("status-no");
+              // }
 
-              let BittrexTime = data.filter(x=>x.name==='Bittrex')[0].dateTime;
-              document.getElementById("bittrexTime").innerText=BittrexTime;
-              document.getElementById("bittrexTimeM").innerText=BittrexTime;
+              // let BittrexTime = data.filter(x=>x.name==='Bittrex')[0].dateTime;
+              // document.getElementById("bittrexTime").innerText=BittrexTime;
+              // document.getElementById("bittrexTimeM").innerText=BittrexTime;
 
               let Kraken = data.filter(x=>x.name==='Kraken')[0].isLIVE;
               document.getElementById("kraken").innerText=Kraken;
@@ -306,8 +306,8 @@
           </div>
           <div class="status-wrapper">
             <span>Is it listed?</span>
-            <div class="status-button" id="bittrex">
-              
+            <div class="status-placeholder">
+              COMING SOON
             </div>
           </div>
           <div class="last-update last-update-m">

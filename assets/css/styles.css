@@ -346,6 +346,20 @@ html *, html *:before, html *:after {
     margin-top: 10px;
     cursor: pointer;
 }
+.lightmode .button-real {
+    background-color: #FFCB69;
+    color: #000;
+    text-align: center;
+}
+.status-placeholder {
+    color: #fff;
+    margin: 0 auto;
+    margin-top: 20px;
+}
+.lightmode .status-placeholder {
+    color: #000;
+    margin: 0 auto;
+}
 @-webkit-keyframes fadeInFromNone {
     0% {
         display: none;
