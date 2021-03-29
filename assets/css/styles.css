@@ -621,6 +621,7 @@ input:focus ~ label {
 }
 .button {
     pointer-events: none;
+    touch-action: none;
   position: absolute;
   right: 0;
   width: 150px;
@@ -646,6 +647,7 @@ input:focus ~ label {
 .showButton {
     opacity: 1;
     pointer-events: all;
+    touch-action: auto;
 }
 .submittedButton {
     width: 100%;
