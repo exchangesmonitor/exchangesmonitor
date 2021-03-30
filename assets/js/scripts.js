@@ -52,15 +52,22 @@ $(document).ready(function(){
     $("label").addClass("moveLabel");
     $(".button").addClass("showButton")
     $(".button").addClass("buttonPointer")
+    $("#mce-EMAIL").addClass("focusBg");
     // $( "label" ).animate({      
     // }, 1000, function() {
     // });
   });
   $( "input" ).blur(function() {
-    setTimeout(function(){      
-      $("label").removeClass("moveLabel"); 
-      $(".button").removeClass("showButton")
-      $(".button").addClass("buttonPointer")
-    }, 300);    
+    if ($("#mce-EMAIL").val() != "" ) {
+      console.log("not empty")
+    } else {
+      console.log("empty")
+      setTimeout(function(){
+        $("label").removeClass("moveLabel"); 
+        $(".button").removeClass("showButton");
+        $(".button").addClass("buttonPointer");
+        $("#mce-EMAIL").removeClass("focusBg");
+      }, 300);  
+    }
   });
 });
