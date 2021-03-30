@@ -956,7 +956,7 @@ footer {
     .button-real {
         padding: 0;
         width: 110px;
-        border-radius: 0 !important;
+        border-radius: 4px !important;
     }
     .w-100 .button-real {
         width: 100%;
