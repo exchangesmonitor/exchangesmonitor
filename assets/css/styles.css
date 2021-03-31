@@ -675,6 +675,10 @@ input:focus ~ label {
     margin: auto 0;
 }
 
+main {
+    max-width: 1800px;
+    margin: 0 auto;
+}
 /*
   input::-webkit-input-placeholder {
     color: #fff;
@@ -965,7 +969,6 @@ footer {
         padding-right: 120px;
     }
 }
-
 
 .modal-window {
     position: fixed;
