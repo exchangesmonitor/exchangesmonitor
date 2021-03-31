@@ -357,10 +357,6 @@ html *, html *:before, html *:after {
     margin-top: 20px;
     padding: 9px 0;
 }
-.lightmode .status-placeholder {
-    color: #000;
-    margin: 0 auto;
-}
 @-webkit-keyframes fadeInFromNone {
     0% {
         display: none;
