@@ -1027,7 +1027,9 @@ footer {
   .modal-close:hover {
     color: #8a8a8a;
   }
-  
+  .attachHere .removeModal {
+    padding-top: 2px;
+  }
 #mc_embed_signup div.mce_inline_error {
     background-color: transparent !important;
 }
