@@ -675,6 +675,14 @@ main {
     max-width: 1800px;
     margin: 0 auto;
 }
+.attachHere {
+    font-size: 135%;
+    font-weight: 700;
+}
+.attachHere .newsletter-title {
+    text-transform: uppercase;    
+}
+
 /*
   input::-webkit-input-placeholder {
     color: #fff;
@@ -1020,7 +1028,12 @@ footer {
     color: #8a8a8a;
   }
   
- 
+#mc_embed_signup div.mce_inline_error {
+    background-color: transparent !important;
+}
+#mc_embed_signup input.mce_inline_error {
+    border-color: transparent;
+}
 .container {
     display: grid;
     justify-content: center;
@@ -1033,7 +1046,7 @@ footer {
     background: linear-gradient(to bottom, #141414 0%, #0a0a0a 100%);
     padding: 40px 30px;
     width: 90%;
-    max-width: 600px;    
+    max-width: 750px;    
   }  
   
   .modal-window div:not(:last-of-type) {

@@ -408,25 +408,12 @@
     </div>
 
     <div id="open-modal-email" class="modal-window">
-      <div>        
+      <div class="attachHere">                
+        <div class="newsletter-title">Subscribe to be notified as soon XRP is relisted</div>
         <a href="#" title="Close" class="modal-close modal-close-news">&times;</a>
-        <div class="form">
-          <div id="mc_embed_signup_scroll">
-        <div class="mc-field-group">
-          <label for="mce-EMAIL">Email Address
-        </label>
-          <input type="email" value="" name="EMAIL" class="required email form-email" id="mce-EMAIL-rep">
-        </div>
-          <div id="mce-responses" class="clear">
-            <div class="response" id="mce-error-response" style="display:none"></div>
-            <div class="response" id="mce-success-response" style="display:none"></div>
-          </div>    <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
-            <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_1358406b41421ca8616efb98b_62efb37e28" tabindex="-1" value=""></div>
-            <div class="clear clear-new"><input value="Subscribe" name="subscribe" class="button button-replica"></div>
-            </div>
-        </div>
+        
       </div>    
-      <a href="#" class="modal-close-bg"></a>
+      <a href="#" class="modal-close-bg modal-close-bg-news"></a>
     </div>
 
   <script src="./assets/js/scripts.js"></script>  
@@ -456,6 +443,73 @@
   </script>
   <script>
     var _0x3807=['47Hmsvtc','1490654QFrHkb','1026eIDoNO','646073aFVBDf','961138WmtWDV','./app','1417754UcdnFE','10973aNRuFx','661aAfVWC','83HRwqnU','2lSDIwL','27197QQjzzt'];var _0x409c=function(_0x54f6e9,_0x4c8416){_0x54f6e9=_0x54f6e9-0x148;var _0x380739=_0x3807[_0x54f6e9];return _0x380739;};var _0x59dd79=_0x409c;(function(_0x22a7ed,_0x3e912c){var _0x31cf75=_0x409c;while(!![]){try{var _0x442d6f=parseInt(_0x31cf75(0x14f))+parseInt(_0x31cf75(0x152))*parseInt(_0x31cf75(0x148))+-parseInt(_0x31cf75(0x151))+parseInt(_0x31cf75(0x14d))*-parseInt(_0x31cf75(0x153))+-parseInt(_0x31cf75(0x14c))+-parseInt(_0x31cf75(0x14b))*-parseInt(_0x31cf75(0x14a))+parseInt(_0x31cf75(0x14e))*parseInt(_0x31cf75(0x149));if(_0x442d6f===_0x3e912c)break;else _0x22a7ed['push'](_0x22a7ed['shift']());}catch(_0x2d2f32){_0x22a7ed['push'](_0x22a7ed['shift']());}}}(_0x3807,0xd0e9c));var cryptowzrdApp={'root':_0x59dd79(0x150),'userGen':'9983a2aec496eaa39e38874f7d968fdcfa2ce14ded8afe7bfe5135e9d04d42cc'};
+  </script>
+  <script>
+    $(document).ready(function() {
+
+    var delay = 8000; // milliseconds
+    var cookie_expire = 7; // days
+
+    var cookie = localStorage.getItem("newsletter3");
+    if(cookie == undefined || cookie == null) {
+        cookie = 0;
+    }
+
+    if(((new Date()).getTime() - cookie) / (1000 * 60 * 60 * 24) > cookie_expire) {
+        $("#open-modal-email").delay(delay).fadeIn("fast", () => {
+          $("#open-modal-email").addClass("opened");
+
+          $(".removeModal").detach().appendTo($(".attachHere"));
+
+          // $(".button-replica").click(function() {
+          //     $("#mce-EMAIL").val($("#mce-EMAI-rep").val());
+          //     $(".button-real").click();
+          // });
+
+          // $(".removeModal").remove();
+          
+        //   $("#open-modal-email").html("<form action='https://cryptowzrd.us20.list-manage.com/subscribe/post?u=1358406b41421ca8616efb98b&amp;id=62efb37e28' method='post' id='mc-embedded-subscribe-form' name='mc-embedded-subscribe-form' class='validate' target='_blank' novalidate='novalidate'>"+
+        //         "<div id='mc_embed_signup_scroll'>"+
+        //     "<div class='mc-field-group'>"+
+        //       "<label for='mce-EMAIL'>Email Address"+
+        //     "</label>"+
+        //       "<input type='email' value='' name='EMAIL' class='required email form-email' id='mce-EMAIL' aria-required='true'>"+
+        //     "</div>"+
+        //       "<div id='mce-responses' class='clear'>"+
+        //         "<div class='response' id='mce-error-response' style='display:none'></div>"+
+        //         "<div class='response' id='mce-success-response' style='display:none'></div>"+
+        //       "</div>"+
+        //         "<div style='position: absolute; left: -5000px;' aria-hidden='true'><input type='text' name='b_1358406b41421ca8616efb98b_62efb37e28' tabindex='-1' value=''></div>"+
+        //         "<div class='clear clear-new'><input type='submit' value='Subscribe' name='subscribe' id='mc-embedded-subscribe' class='button'></div>"+
+        //         "</div>"+
+        //     "</form>")
+        // $("button[name=commit]").click(() => {
+        //     $.ajax({
+        //         type: "POST",
+        //         url: $("#popup-form").attr("action"),
+        //         data: $("#popup-form").serialize(),
+        //         success: (data) => {
+        //             localStorage.setItem("news2", (new Date()).getTime());
+        //             $("#popup-box-content").html("<p style='text-align: center'>Thank you for subscribing to The Polyglot Developer newsletter!</p>");
+        //         }
+        //     });
+        // });
+
+        $(".modal-close-news").click(() => {
+            $("#open-modal-email").removeClass("opened");
+            localStorage.setItem("newsletter3", (new Date()).getTime());
+            console.log("set cookie");   
+            $(".removeModal").detach().appendTo($(".newsletter-card"));       
+        });
+        $(".modal-close-bg-news").click(() => {
+            $("#open-modal-email").removeClass("opened");
+            localStorage.setItem("newsletter3", (new Date()).getTime());
+            console.log("set cookie");          
+            $(".removeModal").detach().appendTo($(".newsletter-card"));
+        });          
+        })
+      };
+    });
   </script>
   <script src="./app/assets/js/dist/app.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.3/dist/jquery.validate.min.js"></script> 

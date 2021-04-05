@@ -18,10 +18,10 @@
 //   e.preventDefault();
 //   this.classList.add('is-done','is-active');
   
-//   setTimeout(function(){ 
-//     button.innerHTML = "Subscribed"
-//   }, 500);
-// });
+  // setTimeout(function(){ 
+  //   button.innerHTML = "Subscribed"
+  // }, 500);
+//});
 
 $( ".toggle-color" ).click(function() {
   $('body').toggleClass("lightmode");
@@ -42,6 +42,14 @@ $(document).ready(function(){
       $(".clear").addClass("w-100");
       $(".button").addClass("submittedButton");
       $(".button").attr("value","Submitted");
+
+      if ($("#open-modal-email").hasClass("opened")) {
+        setTimeout(function(){ 
+          $(".removeModal").detach().appendTo($(".newsletter-card"));
+          $("#open-modal-email").removeClass("opened");
+          localStorage.setItem("newsletter3", (new Date()).getTime());
+        }, 500);        
+      }
     }        
   });
 
