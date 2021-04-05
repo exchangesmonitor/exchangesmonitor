@@ -48,7 +48,7 @@ $(document).ready(function(){
           $(".removeModal").detach().appendTo($(".newsletter-card"));
           $("#open-modal-email").removeClass("opened");
           localStorage.setItem("newsletter3", (new Date()).getTime());
-        }, 500);        
+        }, 800);        
       }
     }        
   });
