@@ -28,14 +28,14 @@
 <meta property="og:url" content="https://xrprelist.com/">
 <meta property="og:title" content="XRP RELIST NOTIFIER">
 <meta property="og:description" content="XRP Relist Notifier tracks the listing status of XRP across a number of US exchange websites. Our system checks every 15 seconds and will update as soon as XRP is relisted on a US exchange.">
-<meta property="og:image" content="https://xrprelist.com/assets/images/XRPRELISTNOTIFIER.png">
+<meta property="og:image" content="https://xrprelist.com/assets/images/XRPRELISTNOTIFIER.png?4362984378">
 
 <!-- Twitter -->
 <meta property="twitter:card" content="summary_large_image">
 <meta property="twitter:url" content="https://xrprelist.com/">
 <meta property="twitter:title" content="XRP RELIST NOTIFIER">
 <meta property="twitter:description" content="XRP Relist Notifier tracks the listing status of XRP across a number of US exchange websites. Our system checks every 15 seconds and will update as soon as XRP is relisted on a US exchange.">
-<meta property="twitter:image" content="https://xrprelist.com/assets/images/XRPRELISTNOTIFIER.png">
+<meta property="twitter:image" content="https://xrprelist.com/assets/images/XRPRELISTNOTIFIER.png?4362984378">
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-DPT5LT896K"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
@@ -474,53 +474,15 @@
     if(((new Date()).getTime() - cookie) / (1000 * 60 * 60 * 24) > cookie_expire) {
         $("#open-modal-email").delay(delay).fadeIn("fast", () => {
           $("#open-modal-email").addClass("opened");
-
-          $(".removeModal").detach().appendTo($(".attachHere"));
-
-          // $(".button-replica").click(function() {
-          //     $("#mce-EMAIL").val($("#mce-EMAI-rep").val());
-          //     $(".button-real").click();
-          // });
-
-          // $(".removeModal").remove();
-          
-        //   $("#open-modal-email").html("<form action='https://cryptowzrd.us20.list-manage.com/subscribe/post?u=1358406b41421ca8616efb98b&amp;id=62efb37e28' method='post' id='mc-embedded-subscribe-form' name='mc-embedded-subscribe-form' class='validate' target='_blank' novalidate='novalidate'>"+
-        //         "<div id='mc_embed_signup_scroll'>"+
-        //     "<div class='mc-field-group'>"+
-        //       "<label for='mce-EMAIL'>Email Address"+
-        //     "</label>"+
-        //       "<input type='email' value='' name='EMAIL' class='required email form-email' id='mce-EMAIL' aria-required='true'>"+
-        //     "</div>"+
-        //       "<div id='mce-responses' class='clear'>"+
-        //         "<div class='response' id='mce-error-response' style='display:none'></div>"+
-        //         "<div class='response' id='mce-success-response' style='display:none'></div>"+
-        //       "</div>"+
-        //         "<div style='position: absolute; left: -5000px;' aria-hidden='true'><input type='text' name='b_1358406b41421ca8616efb98b_62efb37e28' tabindex='-1' value=''></div>"+
-        //         "<div class='clear clear-new'><input type='submit' value='Subscribe' name='subscribe' id='mc-embedded-subscribe' class='button'></div>"+
-        //         "</div>"+
-        //     "</form>")
-        // $("button[name=commit]").click(() => {
-        //     $.ajax({
-        //         type: "POST",
-        //         url: $("#popup-form").attr("action"),
-        //         data: $("#popup-form").serialize(),
-        //         success: (data) => {
-        //             localStorage.setItem("news2", (new Date()).getTime());
-        //             $("#popup-box-content").html("<p style='text-align: center'>Thank you for subscribing to The Polyglot Developer newsletter!</p>");
-        //         }
-        //     });
-        // });
-
+          $(".removeModal").detach().appendTo($(".attachHere"));      
         $(".modal-close-news").click(() => {
             $("#open-modal-email").removeClass("opened");
             localStorage.setItem("newsletter3", (new Date()).getTime());
-            console.log("set cookie");   
             $(".removeModal").detach().appendTo($(".newsletter-card"));       
         });
         $(".modal-close-bg-news").click(() => {
             $("#open-modal-email").removeClass("opened");
             localStorage.setItem("newsletter3", (new Date()).getTime());
-            console.log("set cookie");          
             $(".removeModal").detach().appendTo($(".newsletter-card"));
         });          
         })
