@@ -249,7 +249,8 @@ html *, html *:before, html *:after {
     font-size: 120%;
     border-radius: 8px;
     padding: 8px;
-    width: 80px;
+    width: 126px;
+    letter-spacing: 1px;
     margin: 0 auto;
     margin-top: 20px;
     background-color: #333;
@@ -971,6 +972,9 @@ footer {
     }
     .form-email {
         padding-right: 120px;
+    }
+    .status-button { 
+        width: 100px;
     }
 }
 
